@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap CSS -->
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,6 +19,10 @@
     
   </head>
   <body>
+    <div id="loadinggif">
+      <img src="assests/Images/KUJoe.gif" alt="Loading" />
+    </div>
+    <div id="loading">
     <div class="collapse" id="navbarToggleExternalContent">
       <div class="bg-dark p-4">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -717,5 +722,28 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
     -->
+</div>
+
+ <script>
+      $(window).load(function () {
+        // PAGE IS FULLY LOADED
+        // FADE OUT YOUR OVERLAYING DIV
+        $("#overlay").fadeOut();
+        $("#content").fadeIn(1000);
+      });
+    </script>
+
+<style>
+      #content {
+        display: none;
+      }
+      #overlay {
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+      }
+    </style>
   </body>
 </html>
